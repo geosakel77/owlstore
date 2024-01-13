@@ -141,14 +141,14 @@ def run(filename, password, indexfilename, offset, lope, cstw):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description="OwlStore creates a word index file from an encrypted or not encrypted PDF file.")
-    parser.add_argument("--filename", required=True, type=str, help="The filepath of the PDF book")
-    parser.add_argument("--password", required=False, type=str, help="The password of the file. Default value empty")
-    parser.add_argument("--indexfilename", required=False, type=str, help="The index filename. Default value index.txt")
+    parser.add_argument("--filename", required=True, type=str, help="The filepath of the PDF file.")
+    parser.add_argument("--password", required=False, type=str, help="The password of the file. Default value empty string.")
+    parser.add_argument("--indexfilename", required=False, type=str, help="The index filename. Default value index.txt.")
     parser.add_argument("--offset", required=False, type=int,
-                        help="The offet of the pages not numbered in the pdf file. Default value 2")
+                        help="The offet of the pages not numbered in the pdf file. Default value 2.")
     parser.add_argument("--lope", required=False, type=list,
-                        help="A list of pages that we want to exclude form the index . Default value []")
-    parser.add_argument("-cstw", required=False, type=str, help="Filename of a list of custom stopwords")
+                        help="A list of pages that we want to exclude form the index . Default value [].")
+    parser.add_argument("--cstw", required=False, type=str, help="Filename of a list of custom stopwords. Default value list_of_context_specific_stopwords.txt")
     args = parser.parse_args()
     filename = args.filename
     if args.password:
