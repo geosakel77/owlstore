@@ -1,0 +1,5 @@
+january
+february
+
+
+### Add your context specific stopwords here
